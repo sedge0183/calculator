@@ -10,6 +10,9 @@ def sub(a, b):
 def divide(x, y):
     return x / y
 
+def multiply(x, y):
+    return x * y
+
 
 def main():
     print "-----------------------"
@@ -27,6 +30,8 @@ def main():
         result = sub(a, b)
     elif oper == "/" or oper == "\\":
         result = divide(a, b)
+    elif oper == "*" or oper == "x":
+        result = multiply(a, b)
 
     print "Result: " + str(result) + "\n"
 
@@ -34,5 +39,5 @@ def main():
 if __name__ == "__main__":
     try:
         main()
-    except ValueError: 
+    except ValueError as e: 
         print "Invalid input"
